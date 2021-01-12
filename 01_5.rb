@@ -6,21 +6,25 @@ puts <<~TEXT
 
 TEXT
 
-
  print "プランを選択 > "
  n = gets.to_i
 case n
 when 1
-  puts ""
-  puts "沖縄旅行ですね、何人で行きますか？"
-  puts ""
-  print "人数を入力 > "
-  number = gets.to_i
-  puts ""
-  print "合計料金: ¥"
-  puts  number * 10000
-when n == 2
-  puts "北海道旅行ですね、何人で行きますか？"
-when n == 3
-  puts "九州旅行ですね、何人で行きますか？"
+  place = "沖縄"
+  price = 10000
+when 2
+  place = "北海道"
+  price = 20000
+when 3
+  place = "九州"
+  price = 15000
 end
+
+puts ""
+puts "#{place}旅行ですね、何人で行きますか？"
+puts ""
+print "人数を入力 > "
+number = gets.to_i
+total_price = number * price
+puts ""
+puts "合計料金: ¥#{total_price}"
