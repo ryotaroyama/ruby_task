@@ -1,9 +1,3 @@
-plans = [
-  { place: "沖縄", price: 10000 },
-  { place: "北海道", price: 20000 },
-  { place: "九州", price: 15000 }
-]
-
 def disp_plans(plans)
   puts "旅行プランを選択して下さい。"
   plans.each.with_index(1) do |plan,i|
@@ -43,8 +37,3 @@ def calculate_charges(chosen_plan, man)
   end
   puts "合計料金は#{total_price.floor}円になります。"
 end
-
-disp_plans(plans)
-chosen_plan = choose_plan(plans)
-man = decide_num(chosen_plan)
-calculate_charges(chosen_plan, man)
