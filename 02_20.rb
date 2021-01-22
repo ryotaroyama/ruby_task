@@ -1,5 +1,5 @@
-def info_task(hash)
-  puts "[タスク名] #{hash[:name]} [タスク詳細] #{hash[:detail]}"
+def info_task(name: "洗濯", detail: "8時までに干し終える")
+  puts "[タスク名] #{name} [タスク詳細] #{detail}"
 end
 
 info_task(name: "洗濯", detail: "8時までに干し終える")

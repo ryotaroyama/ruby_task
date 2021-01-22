@@ -8,5 +8,5 @@ plans = [
 
 disp_plans(plans)
 chosen_plan = choose_plan(plans)
-man = decide_num(chosen_plan)
-calculate_charges(chosen_plan, man)
+reservation_number = decide_num(chosen_plan)
+calculate_charges(chosen_plan, reservation_number)
