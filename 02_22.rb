@@ -27,17 +27,17 @@ def decide_num(chosen_plan)
 
   while true
     print "人数を入力 > "
-    man = gets.to_i
-    break if man >= 1
+    reservation_number = gets.to_i
+    break if reservation_number >= 1
     puts "1以上を入力して下さい。"
   end
-  man
+  reservation_number
 end
 
-def calculate_charges(chosen_plan, man)
-  total_price = chosen_plan[:price] * man
-  puts "#{man}名ですね。"
-  if man >= 5
+def calculate_charges(chosen_plan, reservation_number)
+  total_price = chosen_plan[:price] * reservation_number
+  puts "#{reservation_number}名ですね。"
+  if reservation_number >= 5
     puts "5名以上ですので10%割引となります"
     total_price *= 0.9
   end
@@ -46,5 +46,5 @@ end
 
 disp_plans(plans)
 chosen_plan = choose_plan(plans)
-man = decide_num(chosen_plan)
-calculate_charges(chosen_plan, man)
+reservation_number = decide_num(chosen_plan)
+calculate_charges(chosen_plan, reservation_number)
