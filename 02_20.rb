@@ -1,4 +1,4 @@
-def info_task(name: "洗濯", detail: "8時までに干し終える")
+def info_task(name:, detail:)
   puts "[タスク名] #{name} [タスク詳細] #{detail}"
 end
 
