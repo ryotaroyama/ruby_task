@@ -6,5 +6,5 @@ class Item
   end
 end
 
-item = Item.new(name: "ゼロ秒思考")
-puts "#{item.name}"
+book = Item.new(name: "ゼロ秒思考")
+puts book.name
