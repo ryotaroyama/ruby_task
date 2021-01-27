@@ -1,10 +1,12 @@
 class User
+  attr_reader :name, :age
   def initialize(name:, age:)
     @name = name
     @age = age
   end
-  puts "#{@name}さんの入場料金は#{@infant}円です。"
+
 end
+
 
 class Zoo
   def initialize(name:,entry_fee: )
@@ -16,12 +18,17 @@ class Zoo
   end
 
   def info_entry_fee(user)
-    puts <<~TEXT
-    #{@name}さんの入場料金は#{@infant}円です。
-    #{@name}さんの入場料金は#{@children}円です。
-    #{@name}さんの入場料金は#{@adult}円です。
-    #{@name}さんの入場料金は#{@senior}円です。
-    TEXT
+    case user.age
+    when 0..5 then
+      entry_fee = @infant
+    when 6..12 then
+      entry_fee = @children
+    when 13..64
+      entry_fee = @adult
+    when 65..120
+      entry_fee = @senior
+    end
+    puts "#{user.name}さんの入場料金は #{entry_fee} 円です。"
   end
 
 end
