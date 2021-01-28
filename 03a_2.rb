@@ -5,10 +5,9 @@ class User
   end
 
   def introduce
-    case @age
-    when 32 then
+    if @age >= 20
     "こんにちは,#{@name}と申します。宜しくお願いいたします。"
-    when 10 then
+    else
     "はいさいまいど〜,#{@name}です！！！"
     end
   end
