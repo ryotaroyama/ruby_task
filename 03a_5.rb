@@ -19,9 +19,9 @@ class Zoo
 
   def info_entry_fee(user)
     case user.age
-    when 0..5 then
+    when 0..5
       entry_fee = @infant
-    when 6..12 then
+    when 6..12
       entry_fee = @children
     when 13..64
       entry_fee = @adult
